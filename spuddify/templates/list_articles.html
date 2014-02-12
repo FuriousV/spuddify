@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load tags %}
+
+{% block title %}
+<title>SPUDDIFY! - All articles</title>
+{% endblock title %}
+
+{% block content %}
+<section>
+	{% for article in articles %}
+		<div class="article_compact">
+			<div class="article_title"><a href="articles/{{ article.title|make_name }}">{{ article.title }}</a></div>
+			<div class="author_date">
+				<span class="author">{{ article.author }} </span>
+				<span class="created">{{ article.date_created|date:"SHORT_DATE_FORMAT" }}</span>
+			</div>
+			<div class="article_compact_footer">
+				<span class><a href="articles/{{ article.title|make_name }}/edit">Edit</a></span>
+				<span><a href="articles/{{ article.title|make_name }}/delete">Delete</a></span>
+			</div>
+		</div>
+	{% empty %}
+		<h3>There appear to be no articles. How disappointing.</h3>
+	{% endfor %}
+</section>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load tags %}
+
+{% block title %}
+<title>SPUDDIFY! - {{ article.title }} - Edit</title>
+{% endblock title %}
+
+{% block content %}
+<h2 class="content_heading">Editing article: {{ article.title }}</h2>
+<div id="article_form">
+	<form action='/articles/{{ article.title|make_name }}/edit' method='POST'>
+		{% csrf_token %}
+		{% for field in form %}
+			<div class="article_form_field">
+				{{ field.label_tag }}{{ field }}{{ field.errors }}
+			</div>
+		{% endfor %}
+		<input type="submit" value="Submit">
+	</form>
+</div>
+{% endblock content %}

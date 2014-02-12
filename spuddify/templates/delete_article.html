@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load tags %}
+
+{% block title %}
+<title>SPUDDIFY! - {{ article.title }} - Delete</title>
+{% endblock title %}
+
+{% block content %}
+<form action="/articles/{{ article.title|make_name }}/delete" method='POST'>
+	{% csrf_token %}
+	Are you sure you want to delete this article?
+	<input type="submit" value="Submit">
+</form>
+{% endblock content %}

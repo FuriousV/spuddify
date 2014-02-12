@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>SPUDDIFY! - {{ article.title }}</title>
+{% endblock title %}
+
+{% block content %}
+<article class="article_full">
+	<h1>{{ article.title }}</h1>
+	<div>
+		<span id="author">{{ article.author }}</span>
+		<span id="title">{{ article.date_created|date:"DATE_FORMAT" }}</span>
+		{% if article.date_created != article.date_edited %}
+			<span id="edited">Last edited {{ article.date_edited|date:"SHORT_DATETIME_FORMAT" }}</span>
+		{% endif %}
+	</div>
+	<p>{{ article.content|linebreaks }}</p>
+</article>
+
+{% endblock content %}

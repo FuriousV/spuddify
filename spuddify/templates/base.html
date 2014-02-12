@@ -1,0 +1,24 @@
+<!doctype html>
+{% load staticfiles %}
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/base.css' %}">
+		{% block title %}
+		<title>SPUDDIFY - Recent articles</title>
+		{% endblock title %}
+	</head>
+	<body>
+		<header>
+			<a href="/">SPUDDIFY!</a>
+			<nav>
+				<span><a href="/articles/create">New article</a></span>
+				<span><a href="/articles">All articles</a></span>
+			</nav>
+		</header>
+		<div id="main">
+		{% block content %}
+		{% endblock content %}
+		</div>
+	</body>
+</html>

@@ -1,0 +1,119 @@
+* {
+	font-family: Arial;
+}
+
+header {
+	font-family: Arial;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+header a:link, header a:link, header a:visited, header a:hover, header a:active, header a:visited, header a:hover, header a:active {
+	color: black;
+	text-decoration: none;
+	background-color: inherit;
+}
+
+nav {
+	position: relative;
+	font-size: large;
+	text-align: right;
+}
+
+#main {
+	border-left: thin solid black;
+	border-top: thin solid black;
+	padding: 25px;
+	position: relative;
+	width: 800px;
+	left: 50px;
+	top: 20px;
+}
+
+#article_list {
+	position: relative;
+	width: 800px;
+	left: 50px;
+	top: 20px;
+}
+
+.article_compact , article {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+article h1 {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.article_title {
+	font-size: large;
+	position:inherit;
+	font-size: large;
+	font-weight: bold;
+}
+
+.author {
+	font-size: medium;
+	position:inherit;
+	font-style: italic;
+}
+
+.date {
+	font-size: medium;
+	font-style: italic;
+	text-align: right;
+}
+
+.article_compact_footer {
+	font-size: small;
+}
+
+h2.content_heading {
+	font-size: 1.5em;
+	margin-top: 0;
+	}
+
+#article_form {}
+
+article h1 {
+	text-decoration: none;
+}
+
+article span#author {
+	font-weight: bold;
+}
+
+article span#created {
+	font-style: italic;
+}
+
+article span#edited {
+	font-style: italic;	
+	color: red;
+}
+
+div.article_form_field label {
+	width: 75px;
+	margin-right: 15px;
+	display: inline-block;
+	vertical-align: top;
+	}
+
+ ul.errorlist  { 
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 90px;
+	border: 0;
+	padding: 0;
+	list-style-type: none;
+	color: red;
+}
+
+li { 
+	display: inline;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
